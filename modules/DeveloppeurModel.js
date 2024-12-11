@@ -5,7 +5,7 @@ const developpeurSchema = new mongoose.Schema({
     prenom : { type : String, required : true },
     code : { type : Number, required : true },
     anciennete : { type : String, required : true },
-    projet : { type : mongoose.Types.ObjectId, ref : 'Projet'}
+    projet : [{ type : mongoose.Types.ObjectId, ref : 'Projet'}]
 });
 
 module.exports = mongoose.model('Developpeur' , developpeurSchema);
