@@ -14,6 +14,7 @@ class DeveloppeurController {
     static async ajouterUneDeveloppeur(nouvellesDonnees){
         const NouvellesDeveloppeur = new DeveloppeurModel(nouvellesDonnees);
         await NouvellesDeveloppeur.save();
+        return NouvellesDeveloppeur;
     }
 
     static async modifierDeveloppeur(id, nouvellesDonnees){

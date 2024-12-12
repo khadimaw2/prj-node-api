@@ -6,14 +6,15 @@ class ProjetController {
         return Projets ;
     }
 
-    static async recupererUneProjet(id){
+    static async recupererUnProjet(id){
         const Projets = await ProjetModel.findById(id)
         return Projets ;
     }
 
-    static async ajouterUneProjet(nouvellesDonnees){
-        const NouvellesProjet = new ProjetModel(nouvellesDonnees);
-        await NouvellesProjet.save();
+    static async ajouterUnProjet(nouvellesDonnees){
+        const NouveauProjet = new ProjetModel(nouvellesDonnees);
+        await NouveauProjet.save();
+        return NouveauProjet ;
     }
 
     static async modifierProjet(id, nouvellesDonnees){
@@ -27,7 +28,7 @@ class ProjetController {
         return null ;
     }
 
-    static async supprimerUneProjet(id){
+    static async supprimerUnProjet(id){
         const ProjetSupprime = await ProjetModel.findByIdAndDelete(id);
         return ProjetSupprime ;
     }

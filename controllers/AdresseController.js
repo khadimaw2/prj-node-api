@@ -12,8 +12,9 @@ class AdresseController {
     }
 
     static async ajouterUneAdresse(nouvellesDonnees){
-        const NouvellesAdresse = new AdresseModel(nouvellesDonnees);
-        await NouvellesAdresse.save();
+        const NouvellesAdresses = new AdresseModel(nouvellesDonnees);
+        await NouvellesAdresses.save();
+        return NouvellesAdresses;
     }
 
     static async modifierAdresse(id, nouvellesDonnees) {

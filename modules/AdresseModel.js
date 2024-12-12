@@ -7,7 +7,7 @@ const adresseSchema = new mongoose.Schema({
     ville : { type : String, required : true },
     voie : { type : String, required : true },
     numero : { type : String, required : true },
-    entreprise : {type : mongoose.Types.ObjectId , ref : 'Entrepise'}
+    entreprise : {type :mongoose.Schema.Types.ObjectId, ref : 'Entrepise'}
 })
 
 module.exports = mongoose.model('Adresse' , adresseSchema);
