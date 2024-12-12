@@ -17,8 +17,9 @@ class ProjetController {
     }
 
     static async modifierProjet(id, nouvellesDonnees){
-        const EntrepiseModifie = await findByIdAndUpdate(nouvellesDonnees);
-        return EntrepiseModifie;
+        const projetModifie = await ProjetModel.findByIdAndUpdate(id, nouvellesDonnees);
+        return projetModifie;
+        
     }
 
     static async supprimerTousLesProjets(){

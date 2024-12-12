@@ -16,10 +16,11 @@ class AdresseController {
         await NouvellesAdresse.save();
     }
 
-    static async modifierAdresse(id, nouvellesDonnees){
-        const EntrepiseModifiee = await findByIdAndUpdate(nouvellesDonnees);
-        return EntrepiseModifiee;
+    static async modifierAdresse(id, nouvellesDonnees) {
+        const adresseModifiee = await AdresseModel.findByIdAndUpdate(id, nouvellesDonnees);
+        return adresseModifiee;
     }
+    
 
     static async supprimerToutesLesAdresses(){
         await AdresseModel.deleteMany();

@@ -1,4 +1,3 @@
-const { findByIdAndUpdate } = require('../modules/AdresseModel');
 const EntrepriseModel = require('../modules/EntrepriseModel');
 
 class EntrepriseController {

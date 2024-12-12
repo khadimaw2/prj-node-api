@@ -17,8 +17,8 @@ class DeveloppeurController {
     }
 
     static async modifierDeveloppeur(id, nouvellesDonnees){
-        const EntrepiseModifie = await findByIdAndUpdate(nouvellesDonnees);
-        return EntrepiseModifie;
+        const developpeurModifie = await DeveloppeurModel.findByIdAndUpdate(id, nouvellesDonnees);
+        return developpeurModifie;
     }
 
     static async supprimerTousLesDeveloppeurs(){
